@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-
+PORT= 3000
 // Middleware
 app.use(cors({
   origin: 'http://localhost:5173',
