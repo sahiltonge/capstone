@@ -81,7 +81,7 @@ const Signup = () => {
     setProgressBar(true);
     try {
       const res = await axios.post(
-        "youtube-clone-one-snowy.vercel.app/auth/signup",
+        "http://localhost:3000/auth/signup",
         finalSignUpData
       );
       setProgressBar(false);

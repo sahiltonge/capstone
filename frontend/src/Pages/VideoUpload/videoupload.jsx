@@ -61,7 +61,7 @@ const VideoUpload = () => {
     setLoader(true);
     try {
       const res = await axios.post(
-        "https://youtube-clone-one-snowy.vercel.app/video/upload",
+        "http://localhost:3000/video/upload",
         inputField,
         { withCredentials: true }
       );

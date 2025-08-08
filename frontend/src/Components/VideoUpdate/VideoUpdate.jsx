@@ -26,7 +26,7 @@ const VideoUpdateForm = ({ onUpdate }) => {
 
     const fetchVideoData = async () => {
       try {
-        const res = await axios.get(`https://youtube-clone-one-snowy.vercel.app/video/${videoId}`);
+        const res = await axios.get(`http://localhost:3000/video/${videoId}`);
         console.log("Fetched video data:", res.data.video);
         setData(res.data.video);
         setEditTitle(res.data.video.title || "");
@@ -97,7 +97,7 @@ const VideoUpdateForm = ({ onUpdate }) => {
       console.log("Sending update request with data:", body);
 
       const res = await axios.put(
-        `https://youtube-clone-one-snowy.vercel.app/video/update/${videoId}`,
+        `http://localhost:3000/video/update/${videoId}`,
         body,
         { withCredentials: true }
       );
