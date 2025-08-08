@@ -3,7 +3,6 @@ const app = express();
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-PORT= 3000
 // Middleware
 app.use(cors({
   origin: 'http://localhost:5173',
@@ -25,7 +24,7 @@ app.use('/video', VideoRoutes);
 app.use('/comment', CommentRoutes);
 
 // Start Server
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
