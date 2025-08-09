@@ -4,11 +4,15 @@ require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 // Middleware
-app.use(cors({
-  origin: '*', // your frontend URL here
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],      // allowed HTTP methods
-                                       // if you want to allow cookies/auth headers
-}));
+const corsOptions = {
+  origin: 'https://youtube-clone-frontend-gamma.vercel.app/', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,  // allow cookies/auth headers
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(cookieParser());
 
