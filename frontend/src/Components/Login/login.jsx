@@ -29,7 +29,7 @@ const Login = ({ setLoginModal }) => {
   setLoader(true);
   try {
     const res = await axios.post(
-      "http://localhost:3000/auth/login",
+      "https://youtube-clone-coral-seven-38.vercel.app/auth/login",
       loginField,
       {
         withCredentials: true,
@@ -106,3 +106,4 @@ const Login = ({ setLoginModal }) => {
 };
 
 export default Login;
+

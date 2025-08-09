@@ -61,7 +61,7 @@ const VideoUpload = () => {
     setLoader(true);
     try {
       const res = await axios.post(
-        "http://localhost:3000/video/upload",
+        "https://youtube-clone-coral-seven-38.vercel.app/video/upload",
         inputField,
         { withCredentials: true }
       );
@@ -164,3 +164,4 @@ const VideoUpload = () => {
 };
 
 export default VideoUpload;
+

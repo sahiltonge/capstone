@@ -11,7 +11,7 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/search?query=${query}`);
+        const response = await axios.get(`https://youtube-clone-coral-seven-38.vercel.app/video/search?query=${query}`);
         setVideos(response.data);
       } catch (error) {
         console.error('Error fetching search results:', error);

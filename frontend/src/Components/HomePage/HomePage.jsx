@@ -9,7 +9,7 @@ function HomePage({sideNavbar}) {
   const [data,setdata] = useState([])
 
    useEffect(()=>{
-    axios.get('http://localhost:3000/video/allvideo').then(res=>{
+    axios.get('https://youtube-clone-coral-seven-38.vercel.app/video/allvideo').then(res=>{
       console.log(res.data.videos)
       setdata(res.data.videos)
     }).catch(err=>{
