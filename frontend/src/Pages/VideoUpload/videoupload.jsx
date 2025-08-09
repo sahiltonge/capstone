@@ -61,7 +61,7 @@ const VideoUpload = () => {
     setLoader(true);
     try {
       const res = await axios.post(
-        "https://youtube-clone-psi-roan.vercel.app/video/upload",
+        "https://capstone-9ln6.onrender.com/video/upload",
         inputField,
         { withCredentials: true }
       );
@@ -164,4 +164,3 @@ const VideoUpload = () => {
 };
 
 export default VideoUpload;
-

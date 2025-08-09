@@ -29,7 +29,7 @@ const Login = ({ setLoginModal }) => {
   setLoader(true);
   try {
     const res = await axios.post(
-      "https://youtube-clone-psi-roan.vercel.app/auth/login",
+      "https://capstone-9ln6.onrender.com/auth/login",
       loginField,
       {
         withCredentials: true,
@@ -106,4 +106,3 @@ const Login = ({ setLoginModal }) => {
 };
 
 export default Login;
-

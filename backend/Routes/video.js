@@ -12,6 +12,8 @@ router.get('/getVideoById/:id',videoController.getVideoById)
 
 router.get('/:userId/channel',videoController.getAllVideoByUserID)
 
+router.get('/search', videoController.searchVideos);
+
 router.put("/update/:id",auth,videoController.updateVideo)
 
 router.delete('/delete/:id',auth,videoController.deleteVideo)

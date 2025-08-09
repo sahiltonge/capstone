@@ -4,15 +4,10 @@ require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 // Middleware
-const corsOptions = {
-  origin: 'https://youtube-clone-8fb1.vercel.app', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,  // allow cookies/auth headers
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors({
+  origin: 'https://utube-sahil.onrender.com',
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 

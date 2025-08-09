@@ -9,7 +9,7 @@ function HomePage({sideNavbar}) {
   const [data,setdata] = useState([])
 
    useEffect(()=>{
-    axios.get('https://youtube-clone-psi-roan.vercel.app/video/allvideo').then(res=>{
+    axios.get('https://capstone-9ln6.onrender.com/video/allvideo').then(res=>{
       console.log(res.data.videos)
       setdata(res.data.videos)
     }).catch(err=>{

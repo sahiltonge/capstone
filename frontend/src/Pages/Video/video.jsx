@@ -24,7 +24,7 @@ const Video = () => {
 
   const fetchVideoById = async () => {
     await axios
-      .get(`https://youtube-clone-psi-roan.vercel.app/video/getVideoById/${id}`)
+      .get(`https://capstone-9ln6.onrender.com/video/getVideoById/${id}`)
       .then((response) => {
         console.log(response.data.video);
         setData(response.data.video);
@@ -37,7 +37,7 @@ const Video = () => {
 
   const getCommentByvideoId = async () => {
     await axios
-      .get(`https://youtube-clone-psi-roan.vercel.app/comment/comment/${id}`)
+      .get(`https://capstone-9ln6.onrender.com/comment/comment/${id}`)
       .then((response) => {
         console.log(response);
         setComments(response.data.comments);
@@ -57,7 +57,7 @@ const Video = () => {
       message: message,
     };
     await axios
-      .post("https://youtube-clone-psi-roan.vercel.app/comment/comment", body, {
+      .post("https://capstone-9ln6.onrender.com/comment/comment", body, {
         withCredentials: true,
       })
       .then((res) => {
@@ -93,7 +93,7 @@ const Video = () => {
 const handleLike = async () => {
     try {
       const res = await axios.put(
-        `https://youtube-clone-psi-roan.vercel.app/video/like/${id}`,
+        `https://capstone-9ln6.onrender.com/video/like/${id}`,
         {},
         { withCredentials: true }
       );
@@ -113,7 +113,7 @@ const handleLike = async () => {
   const handleDislike = async () => {
     try {
       const res = await axios.put(
-        `https://youtube-clone-psi-roan.vercel.app/video/dislike/${id}`,
+        `https://capstone-9ln6.onrender.com/video/dislike/${id}`,
         {},
         { withCredentials: true }
       );

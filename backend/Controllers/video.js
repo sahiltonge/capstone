@@ -198,3 +198,23 @@ exports.dislikeVideo = async (req, res) => {
         res.status(500).json({ error: 'Server error', details: error.message });
     }
 };
+
+// Search videos by title
+exports.searchVideos = async (req, res) => {
+    try {
+        const { title } = req.query; // example: /videos/search?title=cat
+
+        if (!title || title.trim() === "") {
+            return res.status(400).json({ success: 'false', error: 'Title query parameter is required' });
+        }
+
+        const videos = await Video.find({
+            title: { $regex: title, $options: "i" } // i = case-insensitive
+        }).populate('user', 'channelName profilePic userName createdAt');
+
+        res.status(200).json({ success: 'true', videos });
+    } catch (error) {
+        console.error("Error searching videos:", error);
+        res.status(500).json({ error: 'Server error' });
+    }
+};

@@ -81,9 +81,8 @@ const Signup = () => {
     setProgressBar(true);
     try {
       const res = await axios.post(
-        "https://youtube-clone-psi-roan.vercel.app/auth/signup",
-        finalSignUpData,
-        { withCredentials: true }
+        "https://capstone-9ln6.onrender.com/auth/signup",
+        finalSignUpData
       );
       setProgressBar(false);
 
