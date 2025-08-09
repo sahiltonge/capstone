@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 // Middleware
 app.use(cors({
-  origin: 'https://youtube-clone-frontend-gamma.vercel.app', // your frontend URL here
+  origin: '*', // your frontend URL here
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],      // allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],         // allowed headers
   credentials: true                                          // if you want to allow cookies/auth headers
