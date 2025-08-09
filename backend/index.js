@@ -7,8 +7,7 @@ const cors = require('cors');
 app.use(cors({
   origin: '*', // your frontend URL here
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],      // allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'],         // allowed headers
-  credentials: true                                          // if you want to allow cookies/auth headers
+                                       // if you want to allow cookies/auth headers
 }));
 app.use(express.json());
 app.use(cookieParser());
